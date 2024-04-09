@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Circunferência</title>
+
+    <!--PyScript CSS-->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+
+    <!--PyScript script-->
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="circunferencia.css">
+
+    <!--Fonte-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Ultra&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <main class="row">
+        <header>
+            <div class="col-5" id="titulo" style="align-self: center;">
+                Calculadora de Circunferência
+                <img id="iconeMat" src="assets/math_icon.png" alt="ícone com os símbolos de soma, subtração, multiplicação e divisão" style="width: 35px;">
+            </div>
+
+            <section class="col-5" id="descricao">
+                <div>Instruções: Insira um dos valores abaixo (raio, diâmetro, perímetro ou Área da circunferência) para calcular os demais.</div>
+            </section>
+        </header><br>
+
+        <section class="col-5" id="centro">
+            <div class="container">
+                <div>
+                    <label for="raio">Raio</label>
+                </div>
+    
+                <div>
+                    <input id="raio" name="raio" type="number">
+                </div>
+            </div>
+
+            <div class="container">
+                <div>
+                    <label for="diametro">Diâmetro</label>
+                </div>
+                <div>
+                    <input id="diametro" name="diametro" type="number">
+                </div>
+            </div>
+
+            <div class="container">
+                <div>
+                    <label for="perimetro">Perímetro</label>
+                </div>
+                <div>
+                    <input id="perimetro" name="perimetro" type="number">
+                </div>
+            </div>
+
+            <div class="container">
+                <div>
+                    <label for="area">Área</label>
+                </div>
+                <div>
+                    <input id="area" name="area" type="number">
+                </div>
+            </div>
+
+            <div class="container">
+                <div id="logErro"></div>
+            </div>
+        
+            <div>
+                <button id="calcular" type="submit" py-click="calcBtn">Calcular</button>
+                <button id="limpar" type="submit" py-click="limpBtn">Limpar</button>
+            </div>
+        </section><br>
+    </main>
+
+    <script type="py" src="./circunferencia.py" config="./circunferencia.toml"></script>
+    
+</body>
+</html>
